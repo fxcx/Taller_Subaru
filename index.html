@@ -1,13 +1,824 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuestas</title>
+    <meta charset="utf-8">
+    <title>Subaru Taller</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- <a href="./01/index.html">Diseño 1</a>
-    <a href="./02/index.html">Diseño 2</a> -->
-    <a href="./03/index.html">Diseño 3</a>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light mb-5">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="p-2">
+                        <img class="img-fluid" src="../assets/logo.webp" alt="Icon">
+                    </div>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto p-2">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="#cars" class="nav-item nav-link">Autos</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Header Start -->
+        <div class="container-fluid header bg-white">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-6">Taller <span style="color:rgb(110, 153, 205);">Authorizado Sobaru</span> Palermo</h1>
+                    <p class="animated fadeIn mb-4 pb-2">Ofrecemos los servicios de mecanica, reparacion, venta de respuestos y accesorios. Subaru en la ciudad de Palermo
+                        Brindando la mejor experencia de marca,
+                    </p>
+                    <a href="#contact" class="btn btn-dark py-3 px-5 me-3 animated fadeIn">Descubre y cotiza</a>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <div class="owl-carousel header-carousel">
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt="" style="background-size:cover; height:450px; width:700px;">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="../assets/22_ASC_RTL_safety_2.webp" alt="" style="background-size:cover; height:450px; width:700px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Servicios Start -->
+        <!-- <div class="container-xxl py-5" id="services">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Tipo de Productos o poner los servicios </h1>
+                    <p>Descubre la oferta en repuestos y accesorios que tenemos para ti.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/maintenance04.webp" alt="Icon">
+                                </div>
+                                <h6>Revicion de frenos</h6>
+                                <span>descriptions</span>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/maintenance02.webp" alt="Icon">
+                                </div>
+                                <h6>Revicion de frenos</h6>
+                                <span>descriptions</span>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/maintenance04.webp" alt="Icon">
+                                </div>
+                                <h6>Revicion de frenos</h6>
+                                <span>descriptions</span>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/maintenance04.webp" alt="Icon">
+                                </div>
+                                <h6>Revicion de frenos</h6>
+                                <span>descriptions</span>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/pedal.webp" alt="Icon">
+                                </div>
+                                <h6>Building</h6>
+                                <span>descriptions</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/bujias.webp" alt="Icon">
+                                </div>
+                                <h6>Revicion de frenos</h6>
+                                <span>descriptions</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/popular02.webp" alt="Icon">
+                                </div>
+                                <h6>Revicion de frenos</h6>
+                                <span>description</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="../assets/product/interior06.webp" alt="Icon">
+                                </div>
+                                <h6>Accesorios</h6>
+                                <span>123 Properties</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Category End -->
+
+
+        <!-- About Start -->
+        <!-- <div class="container-xxl py-5" id="about">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-100" src="../assets/ic_desplegable_mobile.webp">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">Proline Service</h1>
+                        <p class="mb-4">Servicio Técnico atendido personalmente por el Sr. Miguel García, con más de 30 años al servicio de la tecnología SUBARU, le permiten proveer la mejor garantía de eficiencia y honestidad en el servicio mecánico y mantenimiento de cada unidad.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Servicio posventa Autorizada Subaru</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Provisión y colocación de cristales (alternativos y originales) en el día para todos los modelos.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Mecanica y colición</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Cambio de baterías originales en el acto.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Presupuestos de chapa y pintura para compañias de seguro.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Reparación de Cajas Automáticas.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Venta de respuesto</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Accesorios Subaru</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Servicio Integral de Aire Acondicionado en cualquier epoca del año.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Cambio de baterías originales en el acto.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Alineacion y balanceo</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Cambio de Aceite</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Suspencion</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Frenos</p>
+                        <a class="btn btn-dark py-3 px-5 mt-3" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- About End -->
+        <!-- sobre el mantenimiento -->
+        <!-- <div class="container-xxl py-5" id="about">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <h1 class="mb-4">Mantenimiento basico</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <p class="mb-4">Mantenimiento basico</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Es conveniente reemplazar los filtros de aire acondicionado una vez al año cuando se efectúa el service del sistema acondicionador.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Es importante el control periódico de los neumáticos como medida de seguridad.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>No agregar líquido de frenos cuando el nivel se encuentre bajo. Es preferible consultar.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Evitar mezclar líquido refrigerante de distintas marcas.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Cada 50.000 Km se debe cambiar el aceite de caja y diferencial.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Y recuerde que estamos a su disposición para cualquier consulta.</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- sobre ele manatenimineto-->
+
+
+        <!-- cars List Start -->
+        <!-- <div class="container-xxl py-5" id="cars">
+            <div class="container">
+                <div class="row g-0 gx-5 align-items-end">
+                    <div class="col-lg-6">
+                        <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                            <h1 class="mb-3">Destacados</h1>
+                            <p>description</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                        <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                            <li class="nav-item me-2">
+                                <a class="btn btn-outline-dark active" data-bs-toggle="pill" href="#tab-1">Compra</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="btn btn-outline-dark" data-bs-toggle="pill" href="#tab-2">Nuevos</a>
+                            </li>
+                            <li class="nav-item me-0">
+                                <a class="btn btn-outline-dark" data-bs-toggle="pill" href="#tab-3">Usados</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">A la venta</div>
+                                        <div class="bg-white rounded-top text-green position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-dark mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex flex-fill border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-broadcast text-primary me-2"></i>Automatica</small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"  fill="rgb(71, 171, 138)" viewBox="0 0 48 48" id="Car-Top-All-Door-Open--Streamline-Core.svg" height="28" width="28"><desc></desc><g id="car-top-all-door-open--car-top-all-door-open-transportation-travel"><path id="Rectangle 1995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M11.142857142857142 13.714285714285714c0 -5.680628571428571 4.605085714285714 -10.285714285714285 10.285714285714285 -10.285714285714285h5.142857142857142c5.680628571428571 0 10.285714285714285 4.605085714285714 10.285714285714285 10.285714285714285v24c0 3.7872 -3.070045714285714 6.857142857142857 -6.857142857142857 6.857142857142857h-12c-3.7870971428571427 0 -6.857142857142857 -3.069942857142857 -6.857142857142857 -6.857142857142857V13.714285714285714Z" stroke-width="1"></path><path id="Vector 3280" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 15.428571428571427 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3281" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 29.142857142857142 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3282" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 15.428571428571427 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3283" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 29.142857142857142 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3284" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 17.142857142857142h10.285714285714285" stroke-width="1"></path><path id="Vector 3285" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 30.857142857142854h10.285714285714285" stroke-width="1"></path></g>
+                                            </svg>doors 5</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-cpu text-primary me-2"></i>computadora</small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/fuel-pump-fill.svg" width="28" height="28">
+                                            combustible
+                                        </small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/cash-coin.svg" width="28" height="28">
+                                                negociable</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-green position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-dark mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex flex-fill border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-broadcast text-primary me-2"></i>Automatica</small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"  fill="rgb(71, 171, 138)" viewBox="0 0 48 48" id="Car-Top-All-Door-Open--Streamline-Core.svg" height="28" width="28"><desc></desc><g id="car-top-all-door-open--car-top-all-door-open-transportation-travel"><path id="Rectangle 1995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M11.142857142857142 13.714285714285714c0 -5.680628571428571 4.605085714285714 -10.285714285714285 10.285714285714285 -10.285714285714285h5.142857142857142c5.680628571428571 0 10.285714285714285 4.605085714285714 10.285714285714285 10.285714285714285v24c0 3.7872 -3.070045714285714 6.857142857142857 -6.857142857142857 6.857142857142857h-12c-3.7870971428571427 0 -6.857142857142857 -3.069942857142857 -6.857142857142857 -6.857142857142857V13.714285714285714Z" stroke-width="1"></path><path id="Vector 3280" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 15.428571428571427 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3281" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 29.142857142857142 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3282" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 15.428571428571427 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3283" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 29.142857142857142 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3284" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 17.142857142857142h10.285714285714285" stroke-width="1"></path><path id="Vector 3285" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 30.857142857142854h10.285714285714285" stroke-width="1"></path></g>
+                                            </svg>doors 5</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-cpu text-primary me-2"></i>computadora</small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/fuel-pump-fill.svg" width="28" height="28">
+                                            combustible
+                                        </small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/cash-coin.svg" width="28" height="28">
+                                                negociable</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"style="background:red;">vendido</div>
+                                        <div class="bg-white rounded-top text-green position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-dark mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex flex-fill border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-broadcast text-primary me-2"></i>Automatica</small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"  fill="rgb(71, 171, 138)" viewBox="0 0 48 48" id="Car-Top-All-Door-Open--Streamline-Core.svg" height="28" width="28"><desc></desc><g id="car-top-all-door-open--car-top-all-door-open-transportation-travel"><path id="Rectangle 1995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M11.142857142857142 13.714285714285714c0 -5.680628571428571 4.605085714285714 -10.285714285714285 10.285714285714285 -10.285714285714285h5.142857142857142c5.680628571428571 0 10.285714285714285 4.605085714285714 10.285714285714285 10.285714285714285v24c0 3.7872 -3.070045714285714 6.857142857142857 -6.857142857142857 6.857142857142857h-12c-3.7870971428571427 0 -6.857142857142857 -3.069942857142857 -6.857142857142857 -6.857142857142857V13.714285714285714Z" stroke-width="1"></path><path id="Vector 3280" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 15.428571428571427 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3281" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 29.142857142857142 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3282" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 15.428571428571427 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3283" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 29.142857142857142 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3284" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 17.142857142857142h10.285714285714285" stroke-width="1"></path><path id="Vector 3285" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 30.857142857142854h10.285714285714285" stroke-width="1"></path></g>
+                                            </svg>doors 5</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-cpu text-primary me-2"></i>computadora</small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/fuel-pump-fill.svg" width="28" height="28">
+                                            combustible
+                                        </small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/cash-coin.svg" width="28" height="28">
+                                                negociable</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-green position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-dark mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex flex-fill border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-broadcast text-primary me-2"></i>Automatica</small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"  fill="rgb(71, 171, 138)" viewBox="0 0 48 48" id="Car-Top-All-Door-Open--Streamline-Core.svg" height="28" width="28"><desc></desc><g id="car-top-all-door-open--car-top-all-door-open-transportation-travel"><path id="Rectangle 1995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M11.142857142857142 13.714285714285714c0 -5.680628571428571 4.605085714285714 -10.285714285714285 10.285714285714285 -10.285714285714285h5.142857142857142c5.680628571428571 0 10.285714285714285 4.605085714285714 10.285714285714285 10.285714285714285v24c0 3.7872 -3.070045714285714 6.857142857142857 -6.857142857142857 6.857142857142857h-12c-3.7870971428571427 0 -6.857142857142857 -3.069942857142857 -6.857142857142857 -6.857142857142857V13.714285714285714Z" stroke-width="1"></path><path id="Vector 3280" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 15.428571428571427 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3281" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 29.142857142857142 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3282" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 15.428571428571427 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3283" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 29.142857142857142 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3284" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 17.142857142857142h10.285714285714285" stroke-width="1"></path><path id="Vector 3285" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 30.857142857142854h10.285714285714285" stroke-width="1"></path></g>
+                                            </svg>doors 5</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-cpu text-primary me-2"></i>computadora</small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/fuel-pump-fill.svg" width="28" height="28">
+                                            combustible
+                                        </small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/cash-coin.svg" width="28" height="28">
+                                                negociable</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-green position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-dark mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex flex-fill border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-broadcast text-primary me-2"></i>Automatica</small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"  fill="rgb(71, 171, 138)" viewBox="0 0 48 48" id="Car-Top-All-Door-Open--Streamline-Core.svg" height="28" width="28"><desc></desc><g id="car-top-all-door-open--car-top-all-door-open-transportation-travel"><path id="Rectangle 1995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M11.142857142857142 13.714285714285714c0 -5.680628571428571 4.605085714285714 -10.285714285714285 10.285714285714285 -10.285714285714285h5.142857142857142c5.680628571428571 0 10.285714285714285 4.605085714285714 10.285714285714285 10.285714285714285v24c0 3.7872 -3.070045714285714 6.857142857142857 -6.857142857142857 6.857142857142857h-12c-3.7870971428571427 0 -6.857142857142857 -3.069942857142857 -6.857142857142857 -6.857142857142857V13.714285714285714Z" stroke-width="1"></path><path id="Vector 3280" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 15.428571428571427 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3281" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 29.142857142857142 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3282" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 15.428571428571427 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3283" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 29.142857142857142 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3284" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 17.142857142857142h10.285714285714285" stroke-width="1"></path><path id="Vector 3285" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 30.857142857142854h10.285714285714285" stroke-width="1"></path></g>
+                                            </svg>doors 5</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-cpu text-primary me-2"></i>computadora</small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/fuel-pump-fill.svg" width="28" height="28">
+                                            combustible
+                                        </small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/cash-coin.svg" width="28" height="28">
+                                                negociable</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-green position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-dark mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex flex-fill border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-broadcast text-primary me-2"></i>Automatica</small>
+                                        <small class="flex-fill text-center border-end py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"  fill="rgb(71, 171, 138)" viewBox="0 0 48 48" id="Car-Top-All-Door-Open--Streamline-Core.svg" height="28" width="28"><desc></desc><g id="car-top-all-door-open--car-top-all-door-open-transportation-travel"><path id="Rectangle 1995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M11.142857142857142 13.714285714285714c0 -5.680628571428571 4.605085714285714 -10.285714285714285 10.285714285714285 -10.285714285714285h5.142857142857142c5.680628571428571 0 10.285714285714285 4.605085714285714 10.285714285714285 10.285714285714285v24c0 3.7872 -3.070045714285714 6.857142857142857 -6.857142857142857 6.857142857142857h-12c-3.7870971428571427 0 -6.857142857142857 -3.069942857142857 -6.857142857142857 -6.857142857142857V13.714285714285714Z" stroke-width="1"></path><path id="Vector 3280" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 15.428571428571427 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3281" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m36.857142857142854 29.142857142857142 8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3282" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 15.428571428571427 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3283" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m11.142857142857142 29.142857142857142 -8.571428571428571 6.857142857142857" stroke-width="1"></path><path id="Vector 3284" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 17.142857142857142h10.285714285714285" stroke-width="1"></path><path id="Vector 3285" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.857142857142858 30.857142857142854h10.285714285714285" stroke-width="1"></path></g>
+                                            </svg>doors 5</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="bi bi-cpu text-primary me-2"></i>computadora</small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/fuel-pump-fill.svg" width="28" height="28">
+                                            combustible
+                                        </small>
+                                        <small class="flex-fill text-center py-2">
+                                            <embed type="image/svg+xml" src="../assets/icons-venta-autos/cash-coin.svg" width="28" height="28">
+                                                negociable</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                                <a class="btn btn-primary py-3 px-5" href="">Consulta</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Vendido</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Vendido</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Vendido</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">modelo de auto</a>
+                                        <p><i class="fa fa-map-marker-alt text-dark me-2"></i>123 Street, Palermo, Buenos Aires</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Vendido</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nuevo</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House Vendido</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$12,345</h5>
+                                        <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                        <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a class="btn btn-primary py-3 px-5" href="#contact">Acesoramiento</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- cars List End -->
+
+
+        <!-- Call to Action Start -->
+        <!-- <div class="container-xxl py-5" id="contact">
+            <div class="container">
+                <div class="bg-light rounded p-3">
+                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                                <img class="img-fluid rounded w-100" src="img/call-to-action.jpg" alt="">
+                            </div>
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="mb-4">
+                                    <h1 class="mb-3">Contact With Our Certified Agent</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus reprehenderit eius, numquam, accusantium, vitae alias similique ut quibusdam ducimus blanditiis temporibus saepe maiores! Ipsa, perferendis? Quis aliquam culpa molestias.</p>
+                                </div>
+                                <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Contactanos</a>
+                                <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Get Appoinment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Call to Action End -->
+
+
+        <section id="brand"  class="brand">
+			<div class="container">
+				<div class="brand-area">
+					<div class="owl-carousel owl-theme brand-item">
+						<div class="item">
+							<a href="#">
+								<img src="../assets/sponsor/footer-logo-cpo.webp" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="../assets/sponsor/footer-logo-express.webp" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="../assets/sponsor/footer-logo-lpcomm.webp" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+
+						<div class="item">
+							<a href="#">
+								<img src="../assets/sponsor/footer-logo-tradeupadv.webp" alt="brand-image" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+		</section><!--/brand-->	
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 col-md-6">
+                        <h5 class="text-white mb-4">Contactanos</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, ubicacion, Buenos Aires</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>1231231231</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social p-4 " href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social p-4" href=""><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Subaru Taller</a>, All Right Reserved. 
+							Designed By 
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">contact</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!--Custom JS-->
+    <script src="js/custom.js"></script>
 </body>
+
 </html>
