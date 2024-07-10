@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/psruizro/public_html/
+    - /usr/bin/git --git-dir=/home/psruizro/repositorios/Taller_Subaru/.git --work-tree=/home/psruizro/repositorios/Taller_Subaru pull origin principal
+    - /bin/cp -R /home/psruizro/repositorios/Taller_Subaru/* $DEPLOYPATH

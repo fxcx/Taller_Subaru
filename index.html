@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-xxl bg-white p-2">
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -80,16 +80,21 @@
                     </p>
                     <a href="#contact" class="btn btn-dark py-3 px-5 me-3 animated fadeIn">Descubre y cotiza</a>
                 </div>
-                <div class="col-md-6 animated fadeIn">
+                <div class="col-md-6 col-12 animated fadeIn">
                     <div class="owl-carousel header-carousel">
                         <div class="owl-carousel-item">
-                            <img class="img-fluid" src="../assets/200_xl_23_FOR_RTL_adventure.webp" alt=""
-                                style="background-size:cover; height:450px; width:700px;">
+                            <picture>
+                                <source srcset="/assets/hero_1.webp" type="image/webp">
+                                <img class="img-fluid" src="/assets/hero_1.jpg" alt="Taller"
+                                    style="object-fit: cover; width: 100%; max-width: 700px;">
+                            </picture>
                         </div>
                         <div class="owl-carousel-item">
-                            <img class="img-fluid" src="../assets/22_ASC_RTL_safety_2.webp" alt=""
-                                style="background-size:cover; height:450px; width:700px;">
-
+                            <picture>
+                                <source srcset="/assets/hero__2.webp" type="image/webp">
+                                <img class="img-fluid" src="/assets/hero_2.jpg" alt="Taller"
+                                    style="background-size: cover; height: 450px; width: 100%; max-width: 700px;">
+                            </picture>
                         </div>
                     </div>
                 </div>
