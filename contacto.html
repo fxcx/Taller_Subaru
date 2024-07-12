@@ -66,64 +66,126 @@
             </nav>
         </div>
 
-        <!-- formulario -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="mb-3">Asesoramiento en la Compra de tu Subaru</h1>
-            <p>Estamos aquí para ayudarte a encontrar el Subaru perfecto para ti. Ya sea que estés buscando un modelo nuevo o usado, nuestro equipo de expertos está listo para brindarte asesoramiento personalizado y responder todas tus preguntas.</p>
-        </div>
-        <form target="_blank" class="row justify-content-center" id="contactForm">
-            <div class="col-md-8">
-                    <div class="mb-3">
-                        <label for="inputEmail" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="nombre@ejemplo.com" required>
+        <!-- formulario
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Asesoramiento en la Compra de tu Subaru</h1>
+                    <p>Estamos aquí para ayudarte a encontrar el Subaru perfecto para ti. Ya sea que estés buscando un
+                        modelo nuevo o usado, nuestro equipo de expertos está listo para brindarte asesoramiento
+                        personalizado y responder todas tus preguntas.</p>
+                </div>
+                <form target="_blank" class="row justify-content-center" id="contactForm">
+                    <div class="col-md-8">
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="nombre@ejemplo.com"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputMessage" class="form-label">Descripción o consulta</label>
+                            <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputFiles" class="form-label">Adjuntar imágenes (opcional)</label>
+                            <input class="form-control" type="file" id="inputFiles" name="files[]" multiple>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </div>
-                    <div class="mb-3">
-                        <label for="inputMessage" class="form-label">Descripción o consulta</label>
-                        <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputFiles" class="form-label">Adjuntar imágenes (opcional)</label>
-                        <input class="form-control" type="file" id="inputFiles" name="files[]" multiple>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
-        </form>
-    </div>
-</div>
-
-<!-- Toast para mostrar mensaje de éxito -->
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-    <div id="successToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <strong class="me-auto">Subaru</strong>
-            <small>hace un momento</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-        <div class="toast-body">
-            ¡El correo se envió correctamente! En breve le responderemos via email.!
+
+        <!-- Toast para mostrar mensaje de éxito -->
+        <!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="successToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Subaru</strong>
+                    <small>hace un momento</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    ¡El correo se envió correctamente! En breve le responderemos via email.!
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<!-- Scripts para manejar el envío del formulario y el Toast -->
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Evitar que el formulario se envíe de forma convencional
+        <!-- Scripts para manejar el envío del formulario y el Toast -->
+        <!-- <script>
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Evitar que el formulario se envíe de forma convencional
 
-        // Aquí iría la lógica para enviar el formulario por AJAX y mostrar el Toast de éxito
-        // Sin embargo, debido a restricciones de seguridad del navegador, no se puede enviar directamente
-        // desde el lado del cliente sin un servidor backend que maneje el correo electrónico.
+                const email = document.getElementById('inputEmail').value;
+                const message = document.getElementById('inputMessage').value;
 
-        // Simulación de éxito para demostración
-        var successToast = new bootstrap.Toast(document.getElementById('successToast'));
-        successToast.show();
-        
-        // Limpieza del formulario
-        document.getElementById('contactForm').reset();
-    });
-</script>
+                fetch('http://localhost:3000/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email, message: message })
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            var successToast = new bootstrap.Toast(document.getElementById('successToast'));
+                            successToast.show();
+                            document.getElementById('contactForm').reset();
+                        } else {
+                            alert('Hubo un problema al enviar el correo.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        </script> -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                    <h1 class="mb-3">Asesoramiento en la Compra de tu Subaru</h1>
+                    <p>Estamos aquí para ayudarte a encontrar el Subaru perfecto para ti. Ya sea que estés buscando un
+                        modelo nuevo o usado, nuestro equipo de expertos está listo para brindarte asesoramiento
+                        personalizado y responder todas tus preguntas.</p>
+                </div>
+                <form class="row justify-content-center" id="contactForm" action="send_email.php" method="POST" enctype="multipart/form-data">
+                    <div class="col-md-8">
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="inputEmail" name="email"
+                                placeholder="nombre@ejemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputMessage" class="form-label">Descripción o consulta</label>
+                            <textarea class="form-control" id="inputMessage" name="message" rows="5"
+                                required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputDate" class="form-label">Fecha deseada</label>
+                            <input type="date" class="form-control" id="inputDate" name="date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputFiles" class="form-label">Adjuntar imágenes (opcional)</label>
+                            <input type="file" class="form-control" id="inputFiles" name="files[]" multiple>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Toast para mostrar mensaje de éxito -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="successToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Subaru</strong>
+                    <small>hace un momento</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    ¡El correo se envió correctamente! En breve le responderemos via email.
+                </div>
+            </div>
+        </div>
 
         <section id="brand" class="brand">
             <div class="container">
@@ -168,17 +230,17 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>4787-4712</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>Servicios
                             <span><a href="repuestos@subaruservice.com.ar
-                            ">services@subaruservice.com.ar
+                                ">services@subaruservice.com.ar
                                 </a></span>
                         </p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>Acesoramiento
                             <span><a href="repuestos@subaruservice.com.ar
-                            ">autos@subaruservice.com.ar
+                                ">autos@subaruservice.com.ar
                                 </a></span>
                         </p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>Repuestos
                             <span><a href="repuestos@subaruservice.com.ar
-                            ">repuestos@subaruservice.com.ar
+                                ">repuestos@subaruservice.com.ar
                                 </a></span>
                         </p>
                     </div>
@@ -238,6 +300,11 @@
     <script src="js/main.js"></script>
     <!--Custom JS-->
     <script src="js/custom.js"></script>
+    <script src="js/send_emails.js"></script>
+
+
+
+
 </body>
 
 </html>
