@@ -210,13 +210,11 @@
 
 /*** Icon ***/
 .icon {
-    padding: 15px;
+    padding: 1em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: #FFFFFF !important;
-    border-radius: 50px;
-    border: 1px dashed var(--primary) !important;
 }
 
 
@@ -242,12 +240,11 @@
 /*** Category ***/
 .cat-item div {
     background: #FFFFFF;
-    border: 1px dashed rgba(0, 129, 185, 0.3);
     transition: .5s;
 }
 
 .cat-item:hover div {
-    background: var(--primary);
+    background:rgba(22, 119, 160, 0.3) ;
     border-color: transparent;
 }
 
@@ -291,34 +288,6 @@
 }
 
 
-/*** Team ***/
-.team-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
-    transition: .5s;
-}
-
-.team-item .btn {
-    color: var(--primary);
-    background: #FFFFFF;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .15);
-}
-
-.team-item .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-.team-item:hover {
-    border-color: var(--secondary) !important;
-}
-
-.team-item:hover .bg-primary {
-    background: var(--secondary) !important;
-}
-
-.team-item:hover .bg-primary i {
-    color: var(--secondary) !important;
-}
 
 
 /*** Testimonial ***/

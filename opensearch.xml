@@ -1,8 +1,8 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
     <ShortName>SUBARU Argentina</ShortName>
     <Description>Search SUBARU Argentina Inventory</Description>
-    <Url type="text/html" method="get" template="https://www.subaru.com.mx/searchall.aspx?q={searchTerms}&opensearch=1"/>
-    <Url type="application/opensearchdescription+xml" rel="self" template="https://www.subaru.com.mx/opensearch.xml"/>
+    <Url type="text/html" method="get" template="https://www.subaru.com.ar/searchall.aspx?q={searchTerms}&opensearch=1"/>
+    <Url type="application/opensearchdescription+xml" rel="self" template="https://www.subaru.com.ar/opensearch.xml"/>
     <Url type="application/x-suggestions+json" template="https://www.subaru.com.mx/api/search/suggest?format=opensearch&prefix={searchTerms}"/>
     <Attribution>© 2024 DealerOn Inc.</Attribution>
     <Language>es-AR</Language>
