@@ -65,80 +65,6 @@
                 </div>
             </nav>
         </div>
-
-        <!-- formulario
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Asesoramiento en la Compra de tu Subaru</h1>
-                    <p>Estamos aquí para ayudarte a encontrar el Subaru perfecto para ti. Ya sea que estés buscando un
-                        modelo nuevo o usado, nuestro equipo de expertos está listo para brindarte asesoramiento
-                        personalizado y responder todas tus preguntas.</p>
-                </div>
-                <form target="_blank" class="row justify-content-center" id="contactForm">
-                    <div class="col-md-8">
-                        <div class="mb-3">
-                            <label for="inputEmail" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="nombre@ejemplo.com"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="inputMessage" class="form-label">Descripción o consulta</label>
-                            <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="inputFiles" class="form-label">Adjuntar imágenes (opcional)</label>
-                            <input class="form-control" type="file" id="inputFiles" name="files[]" multiple>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- Toast para mostrar mensaje de éxito -->
-        <!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-            <div id="successToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                    <strong class="me-auto">Subaru</strong>
-                    <small>hace un momento</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                    ¡El correo se envió correctamente! En breve le responderemos via email.!
-                </div>
-            </div>
-        </div>
-
-        <!-- Scripts para manejar el envío del formulario y el Toast -->
-        <!-- <script>
-            document.getElementById('contactForm').addEventListener('submit', function (event) {
-                event.preventDefault(); // Evitar que el formulario se envíe de forma convencional
-
-                const email = document.getElementById('inputEmail').value;
-                const message = document.getElementById('inputMessage').value;
-
-                fetch('http://localhost:3000/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ email: email, message: message })
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            var successToast = new bootstrap.Toast(document.getElementById('successToast'));
-                            successToast.show();
-                            document.getElementById('contactForm').reset();
-                        } else {
-                            alert('Hubo un problema al enviar el correo.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
-            });
-        </script> -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5" style="max-width: 600px;">
@@ -150,6 +76,11 @@
                 <form class="row justify-content-center" id="contactForm" action="send_email.php" method="POST" enctype="multipart/form-data">
                     <div class="col-md-8">
                         <div class="mb-3">
+                            <label for="inputName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputName" name="claient_name"
+                                placeholder="escriba su nombre" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="inputEmail" class="form-label">Correo electrónico</label>
                             <input type="email" class="form-control" id="inputEmail" name="email"
                                 placeholder="nombre@ejemplo.com" required>
@@ -160,7 +91,7 @@
                                 required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="inputDate" class="form-label">Fecha deseada</label>
+                            <label for="inputDate" class="form-label">fecha de reunion</label>
                             <input type="date" class="form-control" id="inputDate" name="date">
                         </div>
                         <div class="mb-3">
@@ -192,25 +123,17 @@
                 <div class="brand-area">
                     <div class="owl-carousel owl-theme brand-item">
                         <div class="item">
-                            <a href="#">
                                 <img src="../assets/sponsor/footer-logo-cpo.webp" alt="brand-image" />
-                            </a>
                         </div><!--/.item-->
                         <div class="item">
-                            <a href="#">
                                 <img src="../assets/sponsor/footer-logo-express.webp" alt="brand-image" />
-                            </a>
                         </div><!--/.item-->
                         <div class="item">
-                            <a href="#">
                                 <img src="../assets/sponsor/footer-logo-lpcomm.webp" alt="brand-image" />
-                            </a>
                         </div><!--/.item-->
 
                         <div class="item">
-                            <a href="#">
                                 <img src="../assets/sponsor/footer-logo-tradeupadv.webp" alt="brand-image" />
-                            </a>
                         </div>
                     </div>
                 </div>
