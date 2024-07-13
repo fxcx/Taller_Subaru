@@ -30,28 +30,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Construir el cuerpo del correo
-    $to = "info@subaru.com.ar"; // Cambia esto por tu email
+    $to = "info@subaruservice.com.ar"; // Cambia esto por tu email
     $subject = "Nuevo mensaje de formulario de contacto web";
     $headers = "From: " . $email . "\r\n" .
                "Reply-To: " . $email . "\r\n" .
                "Content-Type: text/html; charset=UTF-8";
 
     $body = "<html><body style='font-family: Arial, sans-serif;'>";
-    $body .= "<h2 style='color: #0066cc;'>Nuevo mensaje de formulario web</h2>";
+    $body .= "<h2 style='color: #0066cc;'>Proline service</h2>";
     $body .= "<p><strong style='color: #333;'>Nombre:</strong> " . $name . "</p>";
-    $body .= "<p><strong style='color: #375ccb;'>Correo electrónico:</strong> " . $email . "</p>";
+    $body .= "<p><strong style='color: #41cb37;'>Correo electrónico:</strong> " . $email . "</p>";
     $body .= "<p><strong style='color: #151616;'>Fecha de reunion deseada:</strong> " . $date . "</p>";
     $body .= "<p><strong style='color: #333;'>Mensaje:</strong></p>";
     $body .= "<p style='margin-left: 20px;'>" . nl2br($message) . "</p>";
-    $body .= "</body></html>";
-
-
+    
     // Agregar los archivos adjuntos al cuerpo del correo si existen
     if (!empty($uploadedFiles)) {
+        $body .= "<p><strong style='color: #333;'>Archivos Adjuntos:</strong></p>";
         foreach ($uploadedFiles as $file) {
-            $body .= "<p>Archivo adjunto: <a href='" . $file . "'>" . basename($file) . "</a></p>";
+            $fileName = basename($file);
+            $body .= "<p><a href='" . $file . "'>" . $fileName . "</a></p>";
         }
     }
+
+    $body .= "</body></html>";
 
     // Intentar enviar el correo
     if (mail($to, $subject, $body, $headers)) {
