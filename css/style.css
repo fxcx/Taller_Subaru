@@ -428,3 +428,33 @@
     height:72px;
     border-radius:0;
 }
+
+/*-------------------------------------
+        10. autos
+--------------------------------------*/
+.card-custom {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-custom img {
+    height: 200px;
+    object-fit: cover;
+}
+.card-body-custom {
+    padding: 15px;
+}
+.card-price {
+    color: #2874a7;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
