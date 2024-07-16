@@ -46,7 +46,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -55,43 +55,64 @@
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
         <!-- Spinner End -->
-
-
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
             <nav class="navbar navbar-expand-lg bg-white navbar-light mb-5">
                 <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <div class="p-2">
-                        <img class="img-fluid" src="../assets/logo.webp" alt="Icon">
+                    <div class="p-1">
+                        <img class="img-fluid" width="250" height="250" src="assets/logo (footer).webp" alt="Icon">
                     </div>
                 </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto p-2">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <a href="autos.html" class="nav-item nav-link">Autos</a>
-                        <a href="contacto.html" class="nav-item nav-link">Contacto</a>
+                <div style="display: flex; justify-items: center;">
+                    <div class="navbar-nav ms-auto p-2" style="display: flex; flex-direction: row;">
+                        <a href="index.html" class="nav-item nav-link p-1">Inicio</a>
+                        <a href="service.html" class="nav-item nav-link p-1">Servicios</a>
+                        <a href="autos.html" class="nav-item nav-link p-1">Autos</a>
+                        <a href="contacto.html" class="nav-item nav-link p-1">Contacto</a>
                     </div>
                 </div>
             </nav>
         </div>
         <!-- Navbar End -->
-
-
+        <!-- sobre el mantenimiento -->
+        <div class="container-xxl py-5 mt-2">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <h2>Mantenimiento a considerar</h2>
+                        <div class="about-img position-relative overflow-hidden p-3 pe-0">
+                            <img class="img-fluid w-100" src="/assets/hero/hero__2.webp">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <p><i class="fa fa-check text-primary me-3"></i>Es conveniente reemplazar los filtros de aire
+                            acondicionado una vez al año cuando se efectúa el service del sistema acondicionador.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Es importante el control periódico de los
+                            neumáticos como medida de seguridad.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>No agregar líquido de frenos cuando el nivel se
+                            encuentre bajo. Es preferible consultar.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Evitar mezclar líquido refrigerante de distintas
+                            marcas.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Cada 50.000 Km se debe cambiar el aceite de caja
+                            y diferencial.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Y recuerde que estamos a su disposición para
+                            cualquier consulta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sobre ele manatenimineto-->
         <!-- Servicios Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Mantenimiento y Reparación de Calidad</h1>
+                    <h1 class="mb-3">Reparación completa</h1>
                     <p>Ofrecemos una gama completa de servicios para mantener tu Subaru en las mejores condiciones.
                         Desde mantenimiento regular hasta reparaciones especializadas, estamos aquí para ayudarte.</p>
                 </div>
@@ -290,33 +311,6 @@
                 </div>
             </div>
         </div>
-        <!-- sobre el mantenimiento -->
-        <div class="container-xxl py-5 mt-2">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                            <h2 class="p-2" style="position: relative; z-index: 1;">Mantenimiento basico</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                        <p><i class="fa fa-check text-primary me-3"></i>Es conveniente reemplazar los filtros de aire
-                            acondicionado una vez al año cuando se efectúa el service del sistema acondicionador.</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Es importante el control periódico de los
-                            neumáticos como medida de seguridad.</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>No agregar líquido de frenos cuando el nivel se
-                            encuentre bajo. Es preferible consultar.</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Evitar mezclar líquido refrigerante de distintas
-                            marcas.</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Cada 50.000 Km se debe cambiar el aceite de caja
-                            y diferencial.</p>
-                        <p><i class="fa fa-check text-primary me-3"></i>Y recuerde que estamos a su disposición para
-                            cualquier consulta.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- sobre ele manatenimineto-->
         <section id="brand" class="brand">
             <div class="container">
                 <div class="brand-area">
