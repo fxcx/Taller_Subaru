@@ -1,14 +1,18 @@
 <?php
 error_reporting(E_ALL);
 
+// Verifica que la solicitud sea POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars($_POST['message']);
-    $date = isset($_POST['date']) ? $_POST['date'] : '';
+    $date = isset($_POST['date']) ? htmlspecialchars($_POST['date']) : '';
 
     // Directorio donde se guardarán los archivos subidos
     $targetDir = "uploads/";
+    if (!is_dir($targetDir)) {
+        mkdir($targetDir, 0777, true); // Crear el directorio si no existe
+    }
 
     // Manejo de archivos adjuntos
     $uploadedFiles = [];

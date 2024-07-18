@@ -4,13 +4,23 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const email = document.getElementById('inputEmail').value;
     const message = document.getElementById('inputMessage').value;
     const date = document.getElementById('inputDate').value; // Captura el valor del campo de fecha
+    const files = document.getElementById('inputFiles').files;
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+    formData.append('date', date);
+
+    if (files.length > 0) {
+        for (let i = 0; i < files.length; i++) {
+            formData.append('files[]', files[i]);
+        }
+    }
 
     fetch('send_email.php', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}&date=${encodeURIComponent(date)}`
+        body: formData
     })
     .then(response => response.json())
     .then(data => {
@@ -23,6 +33,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         }
     })
     .catch(error => {
-        console.error('Error:', error);
+        alert('no se pudo enviar el correo correctamente', {message:error});
     });
 });
