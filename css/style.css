@@ -458,3 +458,32 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/*-------------------------------------
+        11 wsp
+--------------------------------------*/
+@keyframes jump {
+    10% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(0);
+    }
+  }
+  
+  .whatsapp-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    animation: jump 1s infinite;
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-button-container:hover {
+    transform: translateY(-10px);
+  }
+  
