@@ -1,4 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/psruizro/public_html
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R --force * $DEPLOYPATH
