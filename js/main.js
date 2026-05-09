@@ -1,60 +1,41 @@
-(function ($) {
-    "use strict";
+"use strict"
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-    
-    
-    // Initiate the wowjs
-    new WOW().init();
+// Spinner
+window.addEventListener("load", function () {
+  const spinner = document.getElementById("spinner")
+  if (spinner) {
+    setTimeout(() => {
+      spinner.classList.remove("show")
+      setTimeout(() => (spinner.style.display = "none"), 500) // Wait for transition
+    }, 1)
+  }
+})
 
+// Sticky Navbar
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".nav-bar")
+  if (navbar) {
+    if (window.scrollY > 45) {
+      navbar.classList.add("sticky-top")
+    } else {
+      navbar.classList.remove("sticky-top")
+    }
+  }
+})
 
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
-            $('.nav-bar').addClass('sticky-top');
-        } else {
-            $('.nav-bar').removeClass('sticky-top');
-        }
-    });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
+// Back to top button
+const backToTop = document.querySelector(".back-to-top")
+if (backToTop) {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.style.display = "flex"
+    } else {
+      backToTop.style.display = "none"
+    }
+  })
 
-
-    // Header carousel
-    $(".header-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        items: 1,
-        dots: true,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
-    });
-
-
-    
-})(jQuery);
-
+  backToTop.addEventListener("click", function (e) {
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  })
+}
