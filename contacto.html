@@ -54,20 +54,16 @@
         </div>
         <!-- Spinner End -->
         <!-- Navbar Start -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light mb-12">
-                <a href="index.html" class="navbar-brand flex items-center text-center">
-                    <div class="p-1">
-                        <img class="max-w-full h-auto" width="250" height="250" src="assets/logo (footer).webp" alt="Icon">
-                    </div>
+        <div class="container mx-auto px-4">
+            <nav class="flex flex-wrap items-center justify-between py-6 mb-12 bg-white">
+                <a href="index.html" class="flex items-center">
+                    <img class="max-w-[200px] h-auto" src="assets/logo (footer).webp" alt="Proline Subaru Logo">
                 </a>
-                <div style="display: flex; justify-items: center;">
-                    <div class="navbar-nav ml-auto p-2" style="display: flex; flex-direction: row;">
-                        <a href="index.html" class="nav-item nav-link p-1">Inicio</a>
-                        <a href="service.html" class="nav-item nav-link p-1">Servicios</a>
-                        <a href="autos.html" class="nav-item nav-link p-1">Autos</a>
-                        <a href="contacto.html" class="nav-item nav-link p-1">Contacto</a>
-                    </div>
+                <div class="flex flex-wrap items-center mt-4 md:mt-0 space-x-2 md:space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium text-lg px-2 transition-colors">Inicio</a>
+                    <a href="service.html" class="text-gray-700 hover:text-primary font-medium text-lg px-2 transition-colors">Servicios</a>
+                    <a href="autos.html" class="text-gray-700 hover:text-primary font-medium text-lg px-2 transition-colors">Autos</a>
+                    <a href="contacto.html" class="text-gray-700 hover:text-primary font-medium text-lg px-2 transition-colors">Contacto</a>
                 </div>
             </nav>
         </div>
@@ -81,8 +77,8 @@
                         modelo nuevo o usado, nuestro equipo de expertos está listo para brindarte asesoramiento
                         personalizado y responder todas tus preguntas.</p>
                 </div>
-                <form class="flex flex-wrap -mx-[15px] justify-center" id="contactForm">
-                    <div class="w-full md:w-2/3 px-[15px]">
+                <form class="flex flex-wrap -mx-4 justify-center" id="contactForm">
+                    <div class="w-full md:w-2/3 px-4">
                         <div class="mb-6">
                             <label for="inputName" class="mb-2 font-medium block">Nombre</label>
                             <input type="text" class="block w-full py-1.5 px-3 text-base border border-[#ced4da] rounded" id="inputName" name="claient_name"
@@ -102,7 +98,7 @@
                             <label for="inputDate" class="mb-2 font-medium block">Fecha de reunión o asesoramiento</label>
                             <input type="date" class="block w-full py-1.5 px-3 text-base border border-[#ced4da] rounded" id="inputDate" name="date" required>
                         </div>
-                        <button type="submit" class="inline-block font-normal text-center align-middle cursor-pointer select-none border border-transparent py-1.5 px-3 text-base rounded transition-colors inline-block font-normal text-center align-middle cursor-pointer select-none border border-transparent py-1.5 px-3 text-base rounded transition-colors-primary">Enviar</button>
+                        <button type="submit" class="inline-block font-medium text-center align-middle cursor-pointer px-6 py-2 rounded text-white bg-primary hover:bg-[#1a7ded] transition-colors">Enviar</button>
                     </div>
                 </form>
 
@@ -129,7 +125,7 @@
                 <div class="toast-header">
                     <strong class="mr-auto">Subaru</strong>
                     <small>hace un momento</small>
-                    <button type="button" class="inline-block font-normal text-center align-middle cursor-pointer select-none border border-transparent py-1.5 px-3 text-base rounded transition-colors-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    <button type="button" class="absolute top-2 right-2 text-gray-500 hover:text-black cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body">
                     ¡El correo se envió correctamente! En breve le responderemos via email.
@@ -160,8 +156,8 @@
         <!-- Footer Start -->
         <div class="container-fluid bg-[#212529] text-white/50 footer pt-12 mt-12 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-12">
-                <div class="flex flex-wrap -mx-[15px] -mx-6">
-                    <div class="w-full lg:w-1/2 px-[15px] w-full md:w-1/2 px-[15px]">
+                <div class="flex flex-wrap -mx-4 gap-y-8">
+                    <div class="w-full md:w-1/2 lg:w-1/2 px-4">
                         <div>
                             <img class="max-w-full h-auto p-1 mb-6" style="width: 36cqmin;" src="assets/logo (footer).webp"
                                 alt="logo subaru" class="max-w-full h-auto">
@@ -180,7 +176,7 @@
                                     href="mailto:repuestos@subaruservice.com.ar">repuestos@subaruservice.com.ar</a></span>
                         </p>
                     </div>
-                    <div class="w-full lg:w-1/2 px-[15px] w-full md:w-1/2 px-[15px]">
+                    <div class="w-full md:w-1/2 lg:w-1/2 px-4">
                         <h5 class="text-white mb-6">Horario de Atención</h5>
                         <p class="mb-2"><i class="fa fa-clock mr-4"></i>Lunes a Viernes: 8:00 AM - 7:00 PM</p>
                         <p class="mb-2"><i class="fa fa-clock mr-4"></i>Sábados y Domingos: Cerrado</p>
@@ -189,13 +185,13 @@
             </div>
             <div class="container">
                 <div class="copyright">
-                    <div class="flex flex-wrap -mx-[15px]">
-                        <div class="w-full md:w-1/2 px-[15px] text-center md:text-left mb-6 mb-md-0">
+                    <div class="flex flex-wrap -mx-4">
+                        <div class="w-full md:w-1/2 px-4 text-center md:text-left mb-6 mb-md-0">
                             &copy; <a class="border-b border-[#dee2e6]" href="https://github.com/fxcx">Subaru Taller</a>, All Right
                             Reserved.
                             <a class="border-b border-[#dee2e6]" href="https://github.com/fxcx">fxcx</a>
                         </div>
-                        <div class="w-full md:w-1/2 px-[15px] text-center md:text-right">
+                        <div class="w-full md:w-1/2 px-4 text-center md:text-right">
                             <div class="footer-menu">
                                 <a href="index.html">Inicio</a>
                                 <a href="service.html">Servicio</a>
